@@ -42,6 +42,7 @@ public class QueryProcessor {
             for (int i = 0; i < numbers.length(); i++) {
                 ints[i] = Integer.valueOf(numbers[i]);
             }
+        }
             return String.valueOf(max(ints));
         return "";
     }
