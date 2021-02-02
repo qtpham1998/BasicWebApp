@@ -11,6 +11,8 @@ public class QueryProcessor {
             return "Isaac Asimov (2 January 1920 - 6 April 1992) was an\n" +
                     "American writer and professor of Biochemistry, famous for\n" +
                     "his works of hard science fiction and popular science.";
+        } else if (query.toLowerCase().contains("name")) {
+            return "HYAT";
         }
         return "";
     }
