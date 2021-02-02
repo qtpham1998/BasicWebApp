@@ -13,6 +13,10 @@ public class QueryProcessor {
                     "his works of hard science fiction and popular science.";
         } else if (query.toLowerCase().contains("name")) {
             return "HYAT";
+        } else if (query.toLowerCase().contains("plus")) {
+            int firstOp = Integer.valueOf(query.toLowerCase(). split("%20|\\s+")[2]);
+            int secondOp = Integer.valueOf(query.toLowerCase(). split("%20|\\s+")[4]);
+            return String.valueOf(firstOp + secondOp);
         }
         return "";
     }
