@@ -34,4 +34,9 @@ public class QueryProcessorTest {
     public void whatIsYourName() throws Exception {
         assertThat(queryProcessor.process("what is your name"), containsString("HYAT"));
     }
+
+    @Test
+    public void knowsMultiplication() throws Exception {
+        assertThat(queryProcessor.process("what is 18 multiplied by 14"), containsString("252"));
+    }
 }
