@@ -3,6 +3,8 @@ package com.develogical;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -38,11 +40,11 @@ public class QueryProcessor {
         } else if (query.toLowerCase().contains("largest")) {
             String[] words = query.split("largest: ");
             String[] numbers = words[1].split(", ");
-            int[] ints = new int[numbers.length()];
-            for (int i = 0; i < numbers.length(); i++) {
+            Integer[] ints = new Integer[numbers.length];
+            for (int i = 0; i < numbers.length; i++) {
                 ints[i] = Integer.valueOf(numbers[i]);
             }
-            return String.valueOf(max(ints));
+            return String.valueOf(Collections.max(Arrays.asList(ints)));
         }   
         return "";
     }
