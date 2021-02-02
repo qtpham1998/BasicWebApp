@@ -36,8 +36,8 @@ public class QueryProcessor {
             int secondOp = Integer.parseInt(query.toLowerCase(). split("%20|\\s+")[4]);
             return String.valueOf(firstOp + secondOp);
         } else if (query.toLowerCase().contains("largest")) {
-            String[] words = query.split("largest:");
-            String[] numbers = words[1].split(%20|\\s+);
+            String[] words = query.split("largest: ");
+            String[] numbers = words[1].split(", ");
             int[] ints = new int[numbers.length()];
             for (int i = 0; i < numbers.length(); i++) {
                 ints[i] = Integer.valueOf(numbers[i]);
