@@ -31,6 +31,10 @@ public class QueryProcessor {
                 return String.valueOf(Integer.parseInt(m.group(1)) * Integer.parseInt(m.group(2)));
             }
             return "0";
+        } else if (query.toLowerCase().contains("plus")) {
+            int firstOp = Integer.parseInt(query.toLowerCase(). split("%20|\\s+")[2]);
+            int secondOp = Integer.parseInt(query.toLowerCase(). split("%20|\\s+")[4]);
+            return String.valueOf(firstOp + secondOp);
         }
         return "";
     }
